@@ -10,7 +10,7 @@ public class Bank implements IBank{
     ArrayList<Client> clientList = new ArrayList<Client>();
     Scanner kb = new Scanner(System.in);
 
-    public void addClient(){
+    public void addClient(Client newClient){
             System.out.print("Enter full name: ");
             String firstName = kb.next();
             String lastName = kb.next();
@@ -33,5 +33,11 @@ public class Bank implements IBank{
     public Client getClient(int id){
         return clientList.get(id);
     }
+
+    @Override
+    public Account getClientAccount(int clientId, int accountNumber) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
             
 }
