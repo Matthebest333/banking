@@ -12,6 +12,7 @@ import java.util.ArrayList;
  * @author cstuser
  */
 public class Client implements IClient{
+    //Class programmed by Chance
     private int id;
     private String firstName;
     ArrayList<Account> accountList;
@@ -27,12 +28,13 @@ public class Client implements IClient{
     }
     
     public void addAccount(Account newAccount) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        accountList.add(newAccount);
     }
 
     
     public void displayAccounts() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        
     }
 
     
