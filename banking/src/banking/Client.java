@@ -22,7 +22,7 @@ public class Client implements IClient{
     
     public Client(String firstName, String lastName, int id){
         this.firstName = firstName;
-        this.lastName = firstName;
+        this.lastName = lastName;
         this.id = id;
         counter++;
     }
@@ -39,20 +39,8 @@ public class Client implements IClient{
 
     
     public Account getAccount(int accountNumber) {
-        
-        int j = 0;
-        
-        for(int i=0; i<accountList.size(); i++){
-            
-            if (accountList.get(i).retrieveAccountNumber() == accountNumber){ 
-            j=i;
-            
-            }
-           
-        }
-         
-   
-    return accountList.get(j);
+        return accountList.get(accountNumber);
     }
-    
+        
+   
 }

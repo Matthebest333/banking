@@ -30,6 +30,7 @@ public class UserInputManager implements IUserInputManager{
 
     @Override
     public Client retrieveClientInfo() {
+        System.out.print("Enter the first name: ");
         
     }
 
