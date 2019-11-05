@@ -5,19 +5,20 @@ import java.util.ArrayList;
 
 public class Bank implements IBank{
     
-    private String bankNumber;
+    private int bankNumber;
     private String address;
     ArrayList<Client> clientList = new ArrayList<Client>();
     Scanner kb = new Scanner(System.in);
 
+    
+    //bank constructor
+    public Bank(int bankNumber, String address){
+        this.bankNumber = bankNumber;
+        this.address = address;
+    }
+    
     public void addClient(Client newClient){
-            System.out.print("Enter full name: ");
-            String firstName = kb.next();
-            String lastName = kb.next();
-
-            System.out.print("Enter id: ");
-            int id = kb.nextInt();
-            clientList.add(firstName, lastName, id);
+            clientList.add(newClient);
     }
 
     public void displayClientAccounts(int clientId){

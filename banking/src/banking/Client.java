@@ -13,18 +13,18 @@ import java.util.ArrayList;
  */
 public class Client implements IClient{
     //Class programmed by Chance
-    private int id;
-    private String firstName;
+    int id;
+    String firstName;
+    String lastName;
     ArrayList<Account> accountList;
     static int counter;
     
     
-    public Client(String firstName, int id){
+    public Client(String firstName, String lastName, int id){
         this.firstName = firstName;
+        this.lastName = firstName;
         this.id = id;
         counter++;
-
-
     }
     
     public void addAccount(Account newAccount) {

@@ -2,28 +2,33 @@ package banking;
 
 import java.util.ArrayList;
 
-public class Account implements IAccount extends Client{
+public class Account implements IAccount {
 
-	private double savingsBalance = 0;
-	private double checkingBalance = 0;
-	private ArrayList<double> transactions = new ArrayList<double>();
-	private int accountNumber;
-	private string type;
-	private string owner;
+    private double balance = 0;
+    private int accountNumber;
+    private String type;
+    private String owner;
 
-	Account(string type){
-		this.type = type;
-	}
+    public Account(String type){
+        this.type = type;
+    }
 
 
-	public double deposit(double depo){
-		transactions.add(depo);
-		balance += depo;
-	}
+    public double deposit(double depo){
 
-	public void displayAllTransactions(){
-		for(int i = 0; i < transactions.size(); i++){
-			System.out.println()
-		}
-	}
+    }
+
+    public void displayAllTransactions(){
+
+    }
+
+    @Override
+    public ArrayList<Transaction> getTransactions() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public double withdrawal(double w) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

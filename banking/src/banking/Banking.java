@@ -9,8 +9,13 @@ public class Banking {
         
         int taskNo = kb.nextInt();
         
+        Bank myBank = new Bank(123, "road idk");
+        
         switch(taskNo){
             case 1:
+                //add client
+                Client newClient = new Client("matthe", "meye", 1);
+                myBank.addClient(newClient);
                 
             break;
             case 2:
@@ -26,7 +31,8 @@ public class Banking {
                 
             break;
             case 6:
-                
+                //list clients
+                myBank.displayClientList();
             break;
             case 7:
                 
