@@ -33,13 +33,26 @@ public class Client implements IClient{
 
     
     public void displayAccounts() {
-        
+        System.out.println(accountList.toString());
         
     }
 
     
     public Account getAccount(int accountNumber) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        int j = 0;
+        
+        for(int i=0; i<accountList.size(); i++){
+            
+            if (accountList.get(i).retrieveAccountNumber() == accountNumber){ 
+            j=i;
+            
+            }
+           
+        }
+         
+   
+    return accountList.get(j);
     }
     
 }
