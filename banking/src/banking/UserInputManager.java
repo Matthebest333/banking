@@ -5,11 +5,14 @@
  */
 package banking;
 
+import com.sun.corba.se.impl.util.RepositoryId;
 import java.util.Scanner;
 
 public class UserInputManager implements IUserInputManager{
     Scanner kb = new Scanner(System.in);
 
+    
+    //Matthew
     @Override
     public int retrieveAccountNumber() {
         System.out.print("Enter the account number: ");
@@ -23,15 +26,27 @@ public class UserInputManager implements IUserInputManager{
         
     }
 
+    //Matthew
     @Override
     public int retrieveClientId() {
-        
+        System.out.print("Enter desired id: ");
+        int desiredId = kb.nextInt();
+        return desiredId;
     }
 
+    
+    //Matthew
     @Override
     public Client retrieveClientInfo() {
-        System.out.print("Enter the first name: ");
+        System.out.print("What is your first name: ");
+        String firstName = kb.next();
         
+        System.out.print("What is your last name: ");
+        String lastName = kb.next();
+        
+        Client newClient = new Client(firstName, lastName);
+        
+        return newClient;
     }
 
     @Override

@@ -2,7 +2,7 @@ package banking;
 
 import java.util.Scanner;
 import java.util.ArrayList;
-
+//written by Matthew
 public class Bank implements IBank{
     
     private int bankNumber;
@@ -27,7 +27,7 @@ public class Bank implements IBank{
 
     public void displayClientList(){
             for(int i = 0; i < clientList.size(); i++){
-                    System.out.println("(" + (i + 1) + ")" + clientList.get(i).firstName + ", " + clientList.get(i).lastName);
+                    System.out.println("(" + i + ") " + clientList.get(i).getFirstName() + ", " + clientList.get(i).getLastName());
             }
     }
 
@@ -37,7 +37,7 @@ public class Bank implements IBank{
 
     @Override
     public Account getClientAccount(int clientId, int accountNumber) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       
     }
 
             

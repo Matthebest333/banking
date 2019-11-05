@@ -9,6 +9,7 @@ public class Banking {
         
         
         Bank myBank = new Bank(123, "road idk");
+        UserInputManager myUserInputManager = new UserInputManager();
         
         boolean exit = false;
         
@@ -18,9 +19,8 @@ public class Banking {
             switch(taskNo){
                 case 1:
                     //add client
-                    Client newClient = new Client("matthe", "meye");
+                    Client newClient = myUserInputManager.retrieveClientInfo();
                     myBank.addClient(newClient);
-
                 break;
                 case 2:
 

@@ -13,11 +13,11 @@ import java.util.ArrayList;
  */
 public class Client implements IClient{
     //Class programmed by Chance
-    int id;
-    String firstName;
-    String lastName;
-    ArrayList<Account> accountList;
-    static int counter;
+    private int id;
+    private String firstName;
+    private String lastName;
+    private ArrayList<Account> accountList;
+    private static int counter;
     
     
     public Client(String firstName, String lastName){
@@ -41,6 +41,15 @@ public class Client implements IClient{
     public Account getAccount(int accountNumber) {
         return accountList.get(accountNumber);
     }
+
+    public String getFirstName() {
+        return this.firstName;
+    }
+
+    public String getLastName() {
+        return this.lastName;
+    }
         
    
+    
 }
