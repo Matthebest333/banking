@@ -23,7 +23,9 @@ public class Banking {
                     myBank.addClient(newClient);
                 break;
                 case 2:
-
+                    //add account
+                    Account newAccount = myUserInputManager.retrieveAccountType();
+                    myBank.clientList.get(myUserInputManager.retrieveClientId()).accountList.add(myUserInputManager.retrieveAccountType());
                 break;
                 case 3:
 

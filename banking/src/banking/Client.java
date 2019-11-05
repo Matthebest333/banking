@@ -16,7 +16,7 @@ public class Client implements IClient{
     private int id;
     private String firstName;
     private String lastName;
-    private ArrayList<Account> accountList;
+    ArrayList<Account> accountList;
     private static int counter;
     
     
@@ -33,8 +33,9 @@ public class Client implements IClient{
 
     
     public void displayAccounts() {
-        System.out.println(accountList.toString());
-        
+        for(int i = 0; i < accountList.size(); i++){
+                    System.out.println("(" + i + ") " + accountList.get(i).getType());
+        }
     }
 
     

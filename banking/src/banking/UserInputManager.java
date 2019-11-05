@@ -24,6 +24,13 @@ public class UserInputManager implements IUserInputManager{
     @Override
     public Account retrieveAccountType() {
         
+        System.out.print("What type of account (checking or savings): ");
+        String type = kb.next();
+        
+        
+        Account newAccount = new Account(type);
+        
+        return newAccount;
     }
 
     //Matthew
