@@ -18,7 +18,7 @@ public class Banking {
             switch(taskNo){
                 case 1:
                     //add client
-                    Client newClient = new Client("matthe", "meye", 1);
+                    Client newClient = new Client("matthe", "meye");
                     myBank.addClient(newClient);
 
                 break;

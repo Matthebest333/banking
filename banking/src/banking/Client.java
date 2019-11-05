@@ -20,10 +20,10 @@ public class Client implements IClient{
     static int counter;
     
     
-    public Client(String firstName, String lastName, int id){
+    public Client(String firstName, String lastName){
         this.firstName = firstName;
         this.lastName = lastName;
-        this.id = id;
+        this.id = Client.counter;
         counter++;
     }
     

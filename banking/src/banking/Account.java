@@ -8,6 +8,7 @@ public class Account implements IAccount {
     private int accountNumber;
     private String type;
     private String owner;
+    private static int counter;
 
     public Account(String type){
         this.type = type;
