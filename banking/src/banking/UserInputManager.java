@@ -58,12 +58,12 @@ public class UserInputManager implements IUserInputManager{
 
     @Override
     public double retrieveTransactionAmount() {
-        //idk lol
+        //idk lol 123
     }
 
     @Override
     public int retrieveUserOption() {
-        
+        //test
     }
     
 }
