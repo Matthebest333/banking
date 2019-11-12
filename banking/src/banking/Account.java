@@ -1,5 +1,6 @@
 package banking;
 
+import java.awt.datatransfer.DataFlavor;
 import java.util.ArrayList;
 //Class written by Chance Sztyk
 public class Account implements IAccount {
@@ -10,6 +11,7 @@ public class Account implements IAccount {
     private String owner;
     private static int counter;
     private ArrayList<Transaction> Transactions; 
+    
     public Account(String type){
         this.type = type;
         counter ++;
@@ -17,9 +19,9 @@ public class Account implements IAccount {
 
 
     public double deposit(double depo){
-        Transaction deposit = new Transaction(depo);
+        Transaction deposit = new Transaction(true, depo);
         Transactions.add(deposit);
-        
+        return depo;
     }
 
     public void displayAllTransactions(){
@@ -28,11 +30,13 @@ public class Account implements IAccount {
 
     @Override
     public ArrayList<Transaction> getTransactions() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return Transactions;
     }
 
     @Override
     public double withdrawal(double w) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Transaction withdrawal = new Transaction(false, w);
+        Transactions.add(withdrawal);
+        return w;
     }
 }
