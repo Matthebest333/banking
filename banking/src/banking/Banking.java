@@ -29,11 +29,9 @@ public class Banking {
                 break;
                 case 3:
                     // make deposit
-                    Transaction newTransaction = 
                 break;
                 case 4:
                     // make withdrawal
-                    
                 break;
                 case 5:
 
