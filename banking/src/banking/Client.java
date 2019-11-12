@@ -26,7 +26,7 @@ public class Client implements IClient{
     //written by matthew
     public void displayAccounts() {
         for(int i = 0; i < accountList.size(); i++){
-                    System.out.println("(" + i + ") " + accountList.get(i).getType());
+                    System.out.println("(" + i + ") " + accountList.get(i).getType() + ": " + accountList.get(i).getBalance());
         }
     }
 
