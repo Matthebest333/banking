@@ -36,7 +36,7 @@ public class UserInputManager implements IUserInputManager{
     //Matthew
     @Override
     public int retrieveClientId() {
-        System.out.print("Enter desired id: ");
+        System.out.print("Enter client id: ");
         int desiredId = kb.nextInt();
         return desiredId;
     }
