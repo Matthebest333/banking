@@ -32,10 +32,12 @@ public class Banking {
                     myBank.getClient(1).addAccount(newAccount);
                 break;
                 case 3:
-
+                    // make deposit
+                    Transaction newTransaction = 
                 break;
                 case 4:
-
+                    // make withdrawal
+                    
                 break;
                 case 5:
 

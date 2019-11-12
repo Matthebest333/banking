@@ -1,7 +1,7 @@
 package banking;
 
 import java.util.ArrayList;
-
+//Class written by Chance Sztyk
 public class Account implements IAccount {
 
     private double balance = 0;
@@ -9,14 +9,17 @@ public class Account implements IAccount {
     private String type;
     private String owner;
     private static int counter;
-
+    private ArrayList<Transaction> Transactions; 
     public Account(String type){
         this.type = type;
+        counter ++;
     }
 
 
     public double deposit(double depo){
-
+        Transaction deposit = new Transaction(depo);
+        Transactions.add(deposit);
+        
     }
 
     public void displayAllTransactions(){
