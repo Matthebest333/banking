@@ -29,9 +29,11 @@ public class Banking {
                 break;
                 case 3:
                     // make deposit
+                    Account newDeposit = myUserInputManager.retrieveTransactionAmount();
                 break;
                 case 4:
                     // make withdrawal
+                    
                 break;
                 case 5:
 
