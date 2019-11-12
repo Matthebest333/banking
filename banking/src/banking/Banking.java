@@ -12,9 +12,10 @@ public class Banking {
         UserInputManager myUserInputManager = new UserInputManager();
         
         boolean exit = false;
-        
+        //writen by matthew
         do{
-            int taskNo = kb.nextInt();
+            int taskNo = myUserInputManager.retrieveUserOption();
+            int id;
             
             switch(taskNo){
                 case 1:
@@ -25,7 +26,11 @@ public class Banking {
                 case 2:
                     //add account
                     Account newAccount = myUserInputManager.retrieveAccountType();
-                    myBank.clientList.get(myUserInputManager.retrieveClientId()).accountList.add(myUserInputManager.retrieveAccountType());
+                    
+                    id = myUserInputManager.retrieveClientId();
+                    
+                    //go from back, pick client and make account
+                    myBank.getClient(id).addAccount(newAccount);
                 break;
                 case 3:
                     // make deposit
@@ -41,7 +46,8 @@ public class Banking {
                     myBank.displayClientList();
                 break;
                 case 7:
-
+                    id = myUserInputManager.retrieveClientId();
+                    myBank.getClient(id).displayAccounts();
                 break;
                 case 8:
                     exit = true;

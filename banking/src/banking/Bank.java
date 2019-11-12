@@ -7,7 +7,7 @@ public class Bank implements IBank{
     
     private int bankNumber;
     private String address;
-    ArrayList<Client> clientList = new ArrayList<Client>();
+    public ArrayList<Client> clientList = new ArrayList<Client>();
     Scanner kb = new Scanner(System.in);
 
     
@@ -22,7 +22,7 @@ public class Bank implements IBank{
     }
 
     public void displayClientAccounts(int clientId){
-
+        
     }
 
     public void displayClientList(){

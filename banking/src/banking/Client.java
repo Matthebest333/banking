@@ -1,22 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package banking;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author cstuser
- */
 public class Client implements IClient{
-    //Class programmed by Chance
+    //written by chance
     private int id;
     private String firstName;
     private String lastName;
-    ArrayList<Account> accountList;
+    ArrayList<Account> accountList = new ArrayList<Account>();
     private static int counter;
     
     
@@ -31,7 +23,7 @@ public class Client implements IClient{
         accountList.add(newAccount);
     }
 
-    
+    //written by matthew
     public void displayAccounts() {
         for(int i = 0; i < accountList.size(); i++){
                     System.out.println("(" + i + ") " + accountList.get(i).getType());
