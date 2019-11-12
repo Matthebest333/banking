@@ -7,8 +7,13 @@ package banking;
 
 /**
  *
- * @author cstuser
+ * @author Chris
  */
 public class Transaction implements ITransaction {
-    
+    boolean type; // withdrawal: 0, deposit: 1
+    double amount;
+
+    public Transaction(boolean type){
+        this.type = type;
+    }
 }
