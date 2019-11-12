@@ -55,7 +55,4 @@ public class Account implements IAccount {
     
 }
 
-//Matthew wrote this
-//gdklbhkdtgb
-
 
