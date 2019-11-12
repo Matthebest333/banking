@@ -14,7 +14,7 @@ public class Account implements IAccount {
     
     public Account(String type){
         this.type = type;
-        counter ++;
+        counter++;
     }
 
 
@@ -25,7 +25,9 @@ public class Account implements IAccount {
     }
 
     public void displayAllTransactions(){
-
+        for (Transaction t: Transactions){
+            System.out.println(t);
+        }
     }
 
     @Override
@@ -39,4 +41,11 @@ public class Account implements IAccount {
         Transactions.add(withdrawal);
         return w;
     }
+
+    public String getType() {
+        return this.type;
+    }
+    
+    
+    
 }
