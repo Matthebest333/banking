@@ -45,7 +45,14 @@ public class Account implements IAccount {
     public String getType() {
         return this.type;
     }
+
+    public double getBalance() {
+        return this.balance;
+    }
+    
     
     
     
 }
+
+
