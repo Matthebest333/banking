@@ -10,9 +10,10 @@ public class Account implements IAccount {
     private String owner;
     private static int counter;
     private ArrayList<Transaction> Transactions; 
+    
     public Account(String type){
         this.type = type;
-        counter ++;
+        counter++;
     }
 
 
@@ -35,4 +36,11 @@ public class Account implements IAccount {
     public double withdrawal(double w) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    public String getType() {
+        return this.type;
+    }
+    
+    
+    
 }
