@@ -56,14 +56,22 @@ public class UserInputManager implements IUserInputManager{
         return newClient;
     }
 
+    //Chris
     @Override
     public double retrieveTransactionAmount() {
-        //idk lol 123
+        System.out.print("Enter the transaction amount: ");
+        int amount = kb.nextInt();
+        
+        return amount;
     }
-
+    
+    //Chris
     @Override
     public int retrieveUserOption() {
-        //test 2
+        System.out.print("Enter the option number: ");
+        int option = kb.nextInt();
+        
+        return option;
     }
     
 }
