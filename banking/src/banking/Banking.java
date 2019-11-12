@@ -34,7 +34,14 @@ public class Banking {
                 break;
                 case 3:
                     // make deposit
-                    Account newDeposit = myUserInputManager.retrieveTransactionAmount();
+                    id = myUserInputManager.retrieveClientId();
+                    int accNumber = myUserInputManager.retrieveAccountNumber();
+                    
+                    double depositAmount = myUserInputManager.retrieveTransactionAmount();
+                    
+                    myBank.getClient(id).addAccount(newAccount);
+                    
+                    
                 break;
                 case 4:
                     // make withdrawal

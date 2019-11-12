@@ -35,10 +35,7 @@ public class Bank implements IBank{
         return clientList.get(id);
     }
 
-    @Override
     public Account getClientAccount(int clientId, int accountNumber) {
-       
-    }
-
-            
+       // return Client.getAccount(accountNumber);
+    }     
 }
