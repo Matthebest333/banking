@@ -25,7 +25,9 @@ public class Account implements IAccount {
     }
 
     public void displayAllTransactions(){
-
+        for (Transaction t: Transactions){
+            System.out.println(t);
+        }
     }
 
     @Override
