@@ -36,6 +36,6 @@ public class Bank implements IBank{
     }
 
     public Account getClientAccount(int clientId, int accountNumber) {
-       // return Client.getAccount(accountNumber);
+        return clientList.get(clientId).getAccount(accountNumber);
     }     
 }
