@@ -10,7 +10,7 @@ public class Account implements IAccount {
     private String type;
     private String owner;
     private static int counter;
-    private ArrayList<Transaction> Transactions; 
+    private ArrayList<Transaction> Transactions = new ArrayList<Transaction>(); 
     
     public Account(String type){
         this.type = type;
@@ -21,6 +21,7 @@ public class Account implements IAccount {
     public double deposit(double depo){
         Transaction deposit = new Transaction(true, depo);
         Transactions.add(deposit);
+        balance += depo;
         return depo;
     }
 
@@ -39,6 +40,7 @@ public class Account implements IAccount {
     public double withdrawal(double w) {
         Transaction withdrawal = new Transaction(false, w);
         Transactions.add(withdrawal);
+        balance -= w;
         return w;
     }
 

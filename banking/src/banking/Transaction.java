@@ -17,4 +17,12 @@ public class Transaction implements ITransaction {
         this.type = type;
         this.amount = amount;
     }
+    
+    public String toString(){
+        if(type){
+            return ("Deposit: " + amount + "$");
+        }else{
+            return ("Withdrawal: " + amount + "$");
+        }
+    }
 }

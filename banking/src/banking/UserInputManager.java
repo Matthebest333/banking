@@ -65,6 +65,7 @@ public class UserInputManager implements IUserInputManager{
     //Chris
     @Override
     public int retrieveUserOption() {
+
         System.out.print("Enter the option number: ");
         int option = kb.nextInt();
         
