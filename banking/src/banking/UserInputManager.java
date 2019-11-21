@@ -57,7 +57,7 @@ public class UserInputManager implements IUserInputManager{
     @Override
     public double retrieveTransactionAmount() {
         System.out.print("Enter the transaction amount: ");
-        int amount = kb.nextInt();
+        double amount = kb.nextDouble();
         
         return amount;
     }

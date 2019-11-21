@@ -36,9 +36,10 @@ public class Banking {
                 case 2:
                     //add account
                     System.out.println("Add new account");
-                    Account newAccount = myUserInputManager.retrieveAccountType();
-                    
+                                        
                     id = myUserInputManager.retrieveClientId();
+                    Account newAccount = myUserInputManager.retrieveAccountType();
+
                     
                     //go from back, pick client and make account
                     myBank.getClient(id).addAccount(newAccount);
@@ -51,7 +52,7 @@ public class Banking {
                     accNumber = myUserInputManager.retrieveAccountNumber();
                     double depositAmount = myUserInputManager.retrieveTransactionAmount();
                     
-                    System.out.println("Deposited " + myBank.getClientAccount(id, accNumber).deposit(depositAmount) + "$");
+                    System.out.printf("Deposited %.2f$%n", myBank.getClientAccount(id, accNumber).deposit(depositAmount));
 
                 break;
                 case 4:
@@ -62,11 +63,12 @@ public class Banking {
                     accNumber = myUserInputManager.retrieveAccountNumber();
                     double withdrawalAmount = myUserInputManager.retrieveTransactionAmount();
                     
-                    System.out.println("Withdrew " + myBank.getClientAccount(id, accNumber).withdrawal(withdrawalAmount) + "$");
+                    System.out.printf("Withdrew %.2f$%n", myBank.getClientAccount(id, accNumber).withdrawal(withdrawalAmount));
                     
                 break;
                 case 5:
                     System.out.println("List account transactions");
+                    
                     id = myUserInputManager.retrieveClientId();
                     accNumber = myUserInputManager.retrieveAccountNumber();
                     
@@ -74,13 +76,13 @@ public class Banking {
                 break;
                 case 6:
                     //list clients
-                    System.out.println("Client list:");
+                    System.out.println("Client list");
                     
                     myBank.displayClientList();
                 break;
                 case 7:
                     //list client accounts
-                    System.out.println("Account list:");
+                    System.out.println("Account list");
                     
                     id = myUserInputManager.retrieveClientId();
                     myBank.displayClientAccounts(id);
