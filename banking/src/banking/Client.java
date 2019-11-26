@@ -61,6 +61,10 @@ public class Client implements IClient{
         Client.counter = counter;
     }
         
+    public String toString(){
+    return ("(" + id + ") " + firstName + " " +lastName);
+    
+    }
    
     
 }

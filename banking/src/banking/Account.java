@@ -10,7 +10,7 @@ public class Account implements IAccount {
     private int accountNumber;
     protected String type;
     private String owner;
-    private static int counter;
+    protected static int counter;
     private ArrayList<Transaction> transactions;
 
     public Account(String type) {
