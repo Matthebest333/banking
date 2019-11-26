@@ -32,7 +32,15 @@ public class Bank implements IBank{
     }
 
     public Client getClient(int id){
-        return clientList.get(id);
+        //@RR
+        //return clientList.get(id);
+        for(Client c: clientList){
+            if(c.getId() == id){
+                return c;
+            }
+        }
+        return null;
+        
     }
 
     public Account getClientAccount(int clientId, int accountNumber) {

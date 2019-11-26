@@ -4,11 +4,12 @@ package banking;
 import java.util.ArrayList;
 
 public class Client implements IClient{
-    //written by chance
+    //written by Chance Sztyk
     private int id;
     private String firstName;
     private String lastName;
-    ArrayList<Account> accountList = new ArrayList<Account>();
+    //@RR
+    private ArrayList<Account> accountList;
     private static int counter;
     
     
@@ -17,6 +18,8 @@ public class Client implements IClient{
         this.lastName = lastName;
         this.id = Client.counter;
         counter++;
+        //@RR
+        this.accountList = new ArrayList<Account>();
     }
     
     public void addAccount(Account newAccount) {
@@ -26,7 +29,9 @@ public class Client implements IClient{
     //written by matthew
     public void displayAccounts() {
         for(int i = 0; i < accountList.size(); i++){
-                    System.out.println("(" + i + ") " + accountList.get(i).getType() + ": " + accountList.get(i).getBalance());
+            //System.out.println("(" + i + ") " + accountList.get(i).getType() + ": " + accountList.get(i).getBalance());
+            //@RR
+            System.out.println(accountList.get(i));
         }
     }
 
@@ -41,6 +46,14 @@ public class Client implements IClient{
 
     public String getLastName() {
         return this.lastName;
+    }
+
+    public int getId() {
+        return counter;
+    }
+
+    public void setId(int counter) {
+        Client.counter = counter;
     }
         
    

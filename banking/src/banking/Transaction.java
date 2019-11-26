@@ -10,19 +10,16 @@ package banking;
  * @author Chris
  */
 public class Transaction implements ITransaction {
-    boolean type; // withdrawal: 0, deposit: 1
+    String type; // withdrawal: 0, deposit: 1
     double amount;
 
-    public Transaction(boolean type, double amount){
+    public Transaction(String type, double amount){
         this.type = type;
         this.amount = amount;
     }
     
     public String toString(){
-        if(type){
-            return ("Deposit: " + amount + "$");
-        }else{
-            return ("Withdrawal: " + amount + "$");
-        }
+        //@RR
+            return (this.type + ": " + amount + "$");
     }
 }
