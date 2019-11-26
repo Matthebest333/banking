@@ -3,6 +3,7 @@ package banking;
 import java.awt.datatransfer.DataFlavor;
 import java.util.ArrayList;
 //Class written by Chance Sztyk
+
 public class Account implements IAccount {
 
     private double balance = 0;
@@ -10,24 +11,23 @@ public class Account implements IAccount {
     protected String type;
     private String owner;
     private static int counter;
-    private ArrayList<Transaction> transactions; 
-    
-    public Account(String type){
+    private ArrayList<Transaction> transactions;
+
+    public Account(String type) {
         this.type = type;
         counter++;
-        transactions = new ArrayList<Transaction>(); 
+        transactions = new ArrayList<Transaction>();
     }
 
- 
-    public double deposit(double depo){
-        Transaction deposit = new Transaction(true, depo);
+    public double deposit(double depo) {
+        Transaction deposit = new Transaction("deposit", depo);
         transactions.add(deposit);
         balance += depo;
         return depo;
     }
 
-    public void displayAllTransactions(){
-        for (Transaction t: transactions){
+    public void displayAllTransactions() {
+        for (Transaction t : transactions) {
             System.out.println(t);
         }
     }
@@ -39,7 +39,7 @@ public class Account implements IAccount {
 
     @Override
     public double withdrawal(double w) {
-        Transaction withdrawal = new Transaction(false, w);
+        Transaction withdrawal = new Transaction("withdrawal", w);
         transactions.add(withdrawal);
         balance -= w;
         return w;
@@ -52,10 +52,13 @@ public class Account implements IAccount {
     public double getBalance() {
         return this.balance;
     }
+
+    public String toString() {
+        return ("(" + counter + ") " + owner  + this.type + " $" + balance);
     
+    
+    }
     
     
     
 }
-
-
