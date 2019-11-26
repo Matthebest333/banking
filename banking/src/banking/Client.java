@@ -37,7 +37,12 @@ public class Client implements IClient{
 
     
     public Account getAccount(int accountNumber) {
-        return accountList.get(accountNumber);
+        for(Account a: accountList){
+            if(a.getAccountNumber() == id){
+                return a;
+            }
+        }
+        return null;
     }
 
     public String getFirstName() {

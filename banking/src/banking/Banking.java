@@ -42,6 +42,8 @@ public class Banking {
 
                     
                     //go from back, pick client and make account
+                    //****We changed the function of the  client id so this needs to change(no longer an index as it's used here)
+                   
                     myBank.getClient(id).addAccount(newAccount);
                 break;
                 case 3:

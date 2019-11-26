@@ -15,6 +15,7 @@ public class Account implements IAccount {
 
     public Account(String type) {
         this.type = type;
+        this.accountNumber = counter;
         counter++;
         transactions = new ArrayList<Transaction>();
     }
@@ -39,7 +40,7 @@ public class Account implements IAccount {
 
     @Override
     public double withdrawal(double w) {
-        Transaction withdrawal = new Transaction("withdrawal", w);
+        Transaction withdrawal = new Transaction("withdrawal1", w);
         transactions.add(withdrawal);
         balance -= w;
         return w;
@@ -52,6 +53,12 @@ public class Account implements IAccount {
     public double getBalance() {
         return this.balance;
     }
+
+    public int getAccountNumber() {
+        return accountNumber;
+    }
+    
+    
 
     public String toString() {
         return ("(" + counter + ") " + owner  + this.type + " $" + balance);
