@@ -28,6 +28,7 @@ public class Client implements IClient{
 
     //written by matthew
     public void displayAccounts() {
+        System.out.println("Accounts for " + this.lastName + ", " + this.firstName);
         for(int i = 0; i < accountList.size(); i++){
             //System.out.println("(" + i + ") " + accountList.get(i).getType() + ": " + accountList.get(i).getBalance());
             //@RR
@@ -54,7 +55,7 @@ public class Client implements IClient{
     }
 
     public int getId() {
-        return counter;
+        return id;
     }
 
     public void setId(int counter) {
@@ -62,7 +63,7 @@ public class Client implements IClient{
     }
         
     public String toString(){
-    return ("(" + id + ") " + firstName + " " +lastName);
+    return ("(" + id + ") " + lastName + ", " +firstName);
     
     }
    

@@ -1,6 +1,7 @@
 
 package banking;
 import java.util.Scanner;
+import java.util.Set;
 
 public class Banking {
 
@@ -29,48 +30,43 @@ public class Banking {
             switch(taskNo){
                 case 1:
                     //add client
-                    System.out.println("Add new client");
                     Client newClient = myUserInputManager.retrieveClientInfo();
                     myBank.addClient(newClient);
                 break;
                 case 2:
                     //add account
-                    System.out.println("Add new account");
-                                        
                     id = myUserInputManager.retrieveClientId();
                     Account newAccount = myUserInputManager.retrieveAccountType();
-
+                    newAccount.setOwner(myBank.getClient(id).getFirstName() + myBank.getClient(id).getLastName());
                     
                     //go from back, pick client and make account
                     //****We changed the function of the  client id so this needs to change(no longer an index as it's used here)
-                   
                     myBank.getClient(id).addAccount(newAccount);
                 break;
                 case 3:
                     // make deposit
-                    System.out.println("Deposit");
-                    
+
                     id = myUserInputManager.retrieveClientId();
                     accNumber = myUserInputManager.retrieveAccountNumber();
                     double depositAmount = myUserInputManager.retrieveTransactionAmount();
                     
                     System.out.printf("Deposited %.2f$%n", myBank.getClientAccount(id, accNumber).deposit(depositAmount));
+                    System.out.println(myBank.getClientAccount(id, accNumber));
 
                 break;
                 case 4:
                     // make withdrawal
-                    System.out.println("Withdraw");
-                    
+
                     id = myUserInputManager.retrieveClientId();
                     accNumber = myUserInputManager.retrieveAccountNumber();
                     double withdrawalAmount = myUserInputManager.retrieveTransactionAmount();
                     
                     System.out.printf("Withdrew %.2f$%n", myBank.getClientAccount(id, accNumber).withdrawal(withdrawalAmount));
+                    System.out.println(myBank.getClientAccount(id, accNumber));
                     
                 break;
                 case 5:
-                    System.out.println("List account transactions");
-                    
+
                     id = myUserInputManager.retrieveClientId();
                     accNumber = myUserInputManager.retrieveAccountNumber();
                     
@@ -78,14 +74,10 @@ public class Banking {
                 break;
                 case 6:
                     //list clients
-                    System.out.println("Client list");
-                    
                     myBank.displayClientList();
                 break;
                 case 7:
-                    //list client accounts
-                    System.out.println("Account list");
-                    
+                    //list client accounts                   
                     id = myUserInputManager.retrieveClientId();
                     myBank.displayClientAccounts(id);
                 break;

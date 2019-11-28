@@ -20,6 +20,6 @@ public class Transaction implements ITransaction {
     
     public String toString(){
         //@RR
-            return (this.type + ": " + amount + "$");
+            return (this.type + " of " + amount + "$");
     }
 }

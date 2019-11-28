@@ -31,6 +31,7 @@ public class Account implements IAccount {
         for (Transaction t : transactions) {
             System.out.println(t);
         }
+        System.out.println(this);
     }
 
     @Override
@@ -57,11 +58,15 @@ public class Account implements IAccount {
     public int getAccountNumber() {
         return accountNumber;
     }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
     
     
 
     public String toString() {
-        return ("(" + counter + ") " + owner  + this.type + " $" + balance);
+        return (this.type + "(" + counter + "): " + balance + " $");
     
     
     }
