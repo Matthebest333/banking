@@ -41,7 +41,7 @@ public class Account implements IAccount {
 
     @Override
     public double withdrawal(double w) {
-        Transaction withdrawal = new Transaction("withdrawal1", w);
+        Transaction withdrawal = new Transaction("withdrawal", w);
         transactions.add(withdrawal);
         balance -= w;
         return w;
