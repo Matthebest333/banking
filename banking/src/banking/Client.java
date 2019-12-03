@@ -39,7 +39,7 @@ public class Client implements IClient{
     
     public Account getAccount(int accountNumber) {
         for(Account a: accountList){
-            if(a.getAccountNumber() == id){
+            if(a.getAccountNumber() == accountNumber){
                 return a;
             }
         }

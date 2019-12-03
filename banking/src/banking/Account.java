@@ -66,7 +66,7 @@ public class Account implements IAccount {
     
 
     public String toString() {
-        return (this.type + "(" + counter + "): " + balance + " $");
+        return (this.type + "(" + accountNumber + "): " + balance + " $");
     
     
     }
